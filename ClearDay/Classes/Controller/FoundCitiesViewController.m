@@ -12,7 +12,7 @@
 #import "CityDetailCell.h"
 #import "DailyForecastViewController.h"
 
-@interface FoundCitiesViewController () <UITableViewDelegate, UITableViewDataSource> {
+@interface FoundCitiesViewController () <UITableViewDelegate, UITableViewDataSource, APICommunicatorDelegate> {
     NSArray *cityList;
 }
 @property (strong, nonatomic) IBOutlet UITableView *cityListTableView;
@@ -34,11 +34,28 @@
 {
     [super viewDidLoad];
     
+    [WeatherAPI sharedInstance].delegate = self;
+
     // get array with group of cities by search request
-    cityList = [CityGroupBuilder getCityGroupByCityName:self.title];
+    [[WeatherAPI sharedInstance] cityListBySearchString:self.title];
     
     self.cityListTableView.delegate = self;
     [self.cityListTableView reloadData];
+}
+
+#pragma mark
+#pragma mark API Communicator Delegate methods
+-(void)receivedCityListArray:(NSArray *)array {
+    cityList = [CityGroupBuilder getCityGroupByFromArray:array];
+}
+
+-(void)fetchingCityListFailed {
+    NSLog(@"Nothing found by request");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Clear Day"
+                                                    message:@"Nothing found.\nTry to correct request."
+                                                   delegate:self cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 #pragma mark
@@ -77,6 +94,5 @@
 -(BOOL)prefersStatusBarHidden {
     return YES;
 }
-
 
 @end

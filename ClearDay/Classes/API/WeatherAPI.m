@@ -15,7 +15,6 @@
     NSString *_apiKey;
     NSString *_apiVersion;
     NSString *_unitsType;
-    NSOperationQueue *_weatherQueue;
 }
 
 @end
@@ -27,12 +26,13 @@
     static dispatch_once_t oncePredicate;
     
     dispatch_once(&oncePredicate, ^{
-        _sharedInstance = [[WeatherAPI alloc] initWithAPIKey:APP_ID];
+        _sharedInstance = [[WeatherAPI alloc] init];
     });
     return _sharedInstance;
 }
 
--(instancetype)initWithAPIKey:(NSString *)apiKey {
+- (instancetype)init
+{
     self = [super init];
     if (self) {
         // prepare manager in backrgound thread
@@ -41,13 +41,10 @@
             persistencyManager = [[PersistencyManager alloc] init];
         });
         
-        _baseURL = @"http://api.openweathermap.org/data/";
-        _apiKey = apiKey;
-        _apiVersion = @"2.5";
-        _unitsType = @"&units=metric";
-        
-        _weatherQueue = [[NSOperationQueue alloc] init];
-        _weatherQueue.name = @"WeatherQueue";
+        _baseURL = BASE_URL;
+        _apiKey = APP_ID;
+        _apiVersion = API_VERSION;
+        _unitsType = UNITS_TYPE;
     }
     return self;
 }
@@ -57,15 +54,15 @@
 }
 
 #pragma mark Find City
--(NSArray *)getCityListBySearchString:(NSString *)searchString {
-    return [persistencyManager getCityGroupByName:searchString];
-}
-
 -(void)cityListBySearchString:(NSString *)searchString {
     NSArray *cityList = [persistencyManager getCityGroupByName:searchString];
-    [self.delegate receivedCityListArray:cityList];
-}
+    if (cityList.count > 0) {
+        [self.delegate receivedCityListArray:cityList];
+    } else {
+        [self.delegate fetchingCityListFailed];
+    }
 
+}
 
 #pragma mark forecast
 -(void)forecastWeatherByCoordinate:(CLLocationCoordinate2D)coordinate {

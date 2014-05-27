@@ -7,7 +7,13 @@
 //
 
 #import "DailyInfo.h"
+#import "DetailForecastInfo.h"
 
 @implementation DailyInfo
-
+-(DetailForecastInfo *)detailForecast {
+    if (_detailForecast == nil) {
+        _detailForecast = [[DetailForecastInfo alloc] init];
+    }
+    return _detailForecast;
+}
 @end

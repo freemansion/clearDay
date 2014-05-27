@@ -1,16 +1,16 @@
 //
-//  UIImage+Extensions.m
+//  UIImage+Rotation.m
 //  ClearDay
 //
 //  Created by Stas Baranovskiy on 19/03/14.
 //  Copyright (c) 2014 Stas Baranovskiy. All rights reserved.
 //
 
-#import "UIImage+Extensions.h"
+#import "UIImage+Rotation.h"
 
 CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 
-@implementation UIImage (Extensions)
+@implementation UIImage (Rotation)
 
 - (UIImage *)imageRotatedByDegrees:(CGFloat)degrees
 {

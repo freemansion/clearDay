@@ -1,20 +1,20 @@
 //
-//  ViewController.m
+//  MasterViewController.m
 //  ClearDay
 //
 //  Created by Stas Baranovskiy on 17/03/14.
 //  Copyright (c) 2014 Stas Baranovskiy. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MasterViewController.h"
 #import "FoundCitiesViewController.h"
 
-@interface ViewController ()
+@interface MasterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *cityNameTextField;
 - (IBAction)searchBtnTouch:(id)sender;
 @end
 
-@implementation ViewController {
+@implementation MasterViewController {
     UITapGestureRecognizer *tapRecognizer;
 }
 

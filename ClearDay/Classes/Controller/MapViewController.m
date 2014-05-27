@@ -38,54 +38,33 @@
     _mapView.showsUserLocation = YES;
     
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(foundTap:)];
-    tapRecognizer.numberOfTapsRequired = 1;
-    tapRecognizer.numberOfTouchesRequired = 1;
     [self.mapView addGestureRecognizer:tapRecognizer];
 }
 
-
-
--(void)foundTap:(UITapGestureRecognizer *)recognizer
-{
-    CGPoint point = [recognizer locationInView:self.mapView];
-    tapPoint = [self.mapView convertPoint:point toCoordinateFromView:self.view];
+-(void)addPinToPointCoordinate:(CLLocationCoordinate2D)coordinate {
+    // remove last pin if need
     if (pointAnnotation) {
         [self.mapView removeAnnotation:pointAnnotation];
     }
     pointAnnotation = [[MKPointAnnotation alloc] init];
-    pointAnnotation.coordinate = tapPoint;
+    pointAnnotation.coordinate = coordinate;
     [self.mapView addAnnotation:pointAnnotation];
+    
+    // update title
+    latStr = [NSString stringWithFormat:@"%.2f", coordinate.latitude];
+    lonStr = [NSString stringWithFormat:@"%.2f", coordinate.longitude];
+    self.title = [NSString stringWithFormat:@"%@, %@", latStr, lonStr];
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    for (UITouch *touch in touches){
-        CGPoint pt = [touch  locationInView:_mapView];
-        if (CGRectContainsPoint(_mapView.frame, pt)) {
-            CLLocationCoordinate2D coord= [_mapView convertPoint:pt toCoordinateFromView:_mapView];
-            latStr = [NSString stringWithFormat:@"%.2f", coord.latitude];
-            lonStr = [NSString stringWithFormat:@"%.2f", coord.longitude];
-            self.title = [NSString stringWithFormat:@"%@, %@", latStr, lonStr];
+-(void)foundTap:(UITapGestureRecognizer *)recognizer
+{
+    CGPoint point = [recognizer locationInView:self.mapView];
+    if (CGRectContainsPoint(self.mapView.frame, point)) {
         
-            NSLog(@"x=%f y=%f - lat=%f long = %f",pt.x,pt.y,coord.latitude,coord.longitude);
-        }
+        tapPoint = [self.mapView convertPoint:point toCoordinateFromView:self.view];
+        
+        [self addPinToPointCoordinate:tapPoint];
     }
-}
-
-#pragma mark
-#pragma mark IBAction methods
-- (IBAction)currentBtnTouch:(id)sender {
-    MKUserLocation *userLocation = _mapView.userLocation;
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance (userLocation.location.coordinate,
-                                                                    20000,
-                                                                    20000);
-    [_mapView setRegion:region animated:NO];
-}
-
-- (IBAction)typeBtnTouch:(id)sender {
-    if (_mapView.mapType == MKMapTypeStandard)
-        _mapView.mapType = MKMapTypeSatellite;
-    else
-        _mapView.mapType = MKMapTypeStandard;
 }
 
 - (IBAction)forecastBtnTouch:(id)sender {

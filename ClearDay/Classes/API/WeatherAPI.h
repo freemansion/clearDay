@@ -14,6 +14,7 @@
 - (void)receivedDataJSON:(NSData *)data;
 - (void)fetchingDataFailedWithError:(NSError *)error;
 - (void)receivedCityListArray:(NSArray *)array;
+- (void)fetchingCityListFailed;
 @end
 
 @interface WeatherAPI : NSObject
@@ -21,10 +22,7 @@
 
 + (WeatherAPI *)sharedInstance;
 
--(instancetype)initWithAPIKey:(NSString *)apiKey;
-
 #pragma mark Find City
--(NSArray *)getCityListBySearchString:(NSString *)searchString;
 -(void)cityListBySearchString:(NSString *)searchString;
 
 #pragma mark Forecast

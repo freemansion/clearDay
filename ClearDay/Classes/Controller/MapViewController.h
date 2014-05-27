@@ -12,8 +12,5 @@
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-- (IBAction)currentBtnTouch:(id)sender;
-- (IBAction)typeBtnTouch:(id)sender;
-
 
 @end

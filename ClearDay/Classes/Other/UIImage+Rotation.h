@@ -1,5 +1,5 @@
 //
-//  UIImage+Extensions.h
+//  UIImage+Rotation.h
 //  ClearDay
 //
 //  Created by Stas Baranovskiy on 19/03/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (Extensions)
+@interface UIImage (Rotation)
 - (UIImage *)imageRotatedByDegrees:(CGFloat)degrees;
 @end

@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface DailyInfoBuilder : NSObject
-
++(NSArray *)getDailyListFromData:(NSData *)data error:(NSError *)error;
 @end

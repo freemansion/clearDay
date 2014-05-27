@@ -11,6 +11,10 @@
 
 // OpenWeather API Constants
 #define APP_ID @"71f55de4e89a781420e75e758f11ea77"
+#define BASE_URL @"http://api.openweathermap.org/data/";
+#define API_VERSION @"2.5";
+#define UNITS_TYPE @"&units=metric";
+
 #define MAX_DAYS_FORECAST 14
 
 // Map View Constants

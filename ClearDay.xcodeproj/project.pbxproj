@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0C27C218DABDCE00F3E787 /* DailyForecastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C27B918DABDCE00F3E787 /* DailyForecastViewController.m */; };
+		DB0C27C318DABDCE00F3E787 /* DetailForecastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C27BB18DABDCE00F3E787 /* DetailForecastViewController.m */; };
+		DB0C27C418DABDCE00F3E787 /* FoundCitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C27BD18DABDCE00F3E787 /* FoundCitiesViewController.m */; };
+		DB0C27C518DABDCE00F3E787 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C27BF18DABDCE00F3E787 /* MapViewController.m */; };
+		DB0C27CD18DABE0D00F3E787 /* CityDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C27C818DABE0D00F3E787 /* CityDetailCell.m */; };
+		DB0C27CE18DABE0D00F3E787 /* DailyDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C27CA18DABE0D00F3E787 /* DailyDetailCell.m */; };
+		DB0C27CF18DABE0D00F3E787 /* DetailForecastView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C27CC18DABE0D00F3E787 /* DetailForecastView.m */; };
+		DB0C27D318DABF3900F3E787 /* city_list.txt in Resources */ = {isa = PBXBuildFile; fileRef = DB0C27D118DABF3900F3E787 /* city_list.txt */; };
+		DB0C27D418DABF3900F3E787 /* windDirection.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0C27D218DABF3900F3E787 /* windDirection.png */; };
+		DB0C27D818DAC97C00F3E787 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C27D718DAC97C00F3E787 /* MasterViewController.m */; };
+		DB0C27DE18DACB0400F3E787 /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C27DB18DACB0400F3E787 /* PersistencyManager.m */; };
+		DB0C27DF18DACB0400F3E787 /* WeatherAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C27DD18DACB0400F3E787 /* WeatherAPI.m */; };
+		DB0C27E918DACB8500F3E787 /* UIImage+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0C27E818DACB8500F3E787 /* UIImage+Rotation.m */; };
+		DB1EA20118D9946400B661FC /* DailyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1EA20018D9946400B661FC /* DailyInfo.m */; };
+		DB1EA20418D9955900B661FC /* DailyInfoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1EA20318D9955900B661FC /* DailyInfoBuilder.m */; };
+		DB1EA21318DA225C00B661FC /* DetailForecastInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1EA21218DA225C00B661FC /* DetailForecastInfo.m */; };
 		DB8B015818D75DE6008205C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8B015718D75DE6008205C8 /* Foundation.framework */; };
 		DB8B015A18D75DE6008205C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8B015918D75DE6008205C8 /* CoreGraphics.framework */; };
 		DB8B015C18D75DE6008205C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8B015B18D75DE6008205C8 /* UIKit.framework */; };
@@ -20,7 +36,10 @@
 		DB8B017918D75DE6008205C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8B015B18D75DE6008205C8 /* UIKit.framework */; };
 		DB8B018118D75DE6008205C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB8B017F18D75DE6008205C8 /* InfoPlist.strings */; };
 		DB8B018318D75DE6008205C8 /* ClearDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8B018218D75DE6008205C8 /* ClearDayTests.m */; };
-		DB8B019818D75EC3008205C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8B019718D75EC3008205C8 /* ViewController.m */; };
+		DB8B01A818D777C2008205C8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8B01A718D777C2008205C8 /* MapKit.framework */; };
+		DB8B020618D825B3008205C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB8B020518D825B3008205C8 /* CoreLocation.framework */; };
+		DB8B021518D856FA008205C8 /* CityGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8B021418D856FA008205C8 /* CityGroup.m */; };
+		DB8B021818D857D3008205C8 /* CityGroupBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8B021718D857D3008205C8 /* CityGroupBuilder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +53,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB0C27B818DABDCE00F3E787 /* DailyForecastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyForecastViewController.h; sourceTree = "<group>"; };
+		DB0C27B918DABDCE00F3E787 /* DailyForecastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyForecastViewController.m; sourceTree = "<group>"; };
+		DB0C27BA18DABDCE00F3E787 /* DetailForecastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailForecastViewController.h; sourceTree = "<group>"; };
+		DB0C27BB18DABDCE00F3E787 /* DetailForecastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailForecastViewController.m; sourceTree = "<group>"; };
+		DB0C27BC18DABDCE00F3E787 /* FoundCitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundCitiesViewController.h; sourceTree = "<group>"; };
+		DB0C27BD18DABDCE00F3E787 /* FoundCitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundCitiesViewController.m; sourceTree = "<group>"; };
+		DB0C27BE18DABDCE00F3E787 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		DB0C27BF18DABDCE00F3E787 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		DB0C27C718DABE0D00F3E787 /* CityDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityDetailCell.h; sourceTree = "<group>"; };
+		DB0C27C818DABE0D00F3E787 /* CityDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityDetailCell.m; sourceTree = "<group>"; };
+		DB0C27C918DABE0D00F3E787 /* DailyDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyDetailCell.h; sourceTree = "<group>"; };
+		DB0C27CA18DABE0D00F3E787 /* DailyDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyDetailCell.m; sourceTree = "<group>"; };
+		DB0C27CB18DABE0D00F3E787 /* DetailForecastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailForecastView.h; sourceTree = "<group>"; };
+		DB0C27CC18DABE0D00F3E787 /* DetailForecastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailForecastView.m; sourceTree = "<group>"; };
+		DB0C27D118DABF3900F3E787 /* city_list.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = city_list.txt; sourceTree = "<group>"; };
+		DB0C27D218DABF3900F3E787 /* windDirection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = windDirection.png; sourceTree = "<group>"; };
+		DB0C27D618DAC97C00F3E787 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		DB0C27D718DAC97C00F3E787 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		DB0C27DA18DACB0400F3E787 /* PersistencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistencyManager.h; sourceTree = "<group>"; };
+		DB0C27DB18DACB0400F3E787 /* PersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistencyManager.m; sourceTree = "<group>"; };
+		DB0C27DC18DACB0400F3E787 /* WeatherAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherAPI.h; sourceTree = "<group>"; };
+		DB0C27DD18DACB0400F3E787 /* WeatherAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherAPI.m; sourceTree = "<group>"; };
+		DB0C27E618DACB8500F3E787 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		DB0C27E718DACB8500F3E787 /* UIImage+Rotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotation.h"; sourceTree = "<group>"; };
+		DB0C27E818DACB8500F3E787 /* UIImage+Rotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotation.m"; sourceTree = "<group>"; };
+		DB1EA1FF18D9946400B661FC /* DailyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyInfo.h; sourceTree = "<group>"; };
+		DB1EA20018D9946400B661FC /* DailyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyInfo.m; sourceTree = "<group>"; };
+		DB1EA20218D9955900B661FC /* DailyInfoBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyInfoBuilder.h; sourceTree = "<group>"; };
+		DB1EA20318D9955900B661FC /* DailyInfoBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyInfoBuilder.m; sourceTree = "<group>"; };
+		DB1EA21118DA225C00B661FC /* DetailForecastInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailForecastInfo.h; sourceTree = "<group>"; };
+		DB1EA21218DA225C00B661FC /* DetailForecastInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailForecastInfo.m; sourceTree = "<group>"; };
 		DB8B015418D75DE6008205C8 /* ClearDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8B015718D75DE6008205C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DB8B015918D75DE6008205C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,8 +101,12 @@
 		DB8B017E18D75DE6008205C8 /* ClearDayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClearDayTests-Info.plist"; sourceTree = "<group>"; };
 		DB8B018018D75DE6008205C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DB8B018218D75DE6008205C8 /* ClearDayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClearDayTests.m; sourceTree = "<group>"; };
-		DB8B019618D75EC3008205C8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DB8B019718D75EC3008205C8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DB8B01A718D777C2008205C8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DB8B020518D825B3008205C8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DB8B021318D856FA008205C8 /* CityGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityGroup.h; sourceTree = "<group>"; };
+		DB8B021418D856FA008205C8 /* CityGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityGroup.m; sourceTree = "<group>"; };
+		DB8B021618D857D3008205C8 /* CityGroupBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityGroupBuilder.h; sourceTree = "<group>"; };
+		DB8B021718D857D3008205C8 /* CityGroupBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityGroupBuilder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB8B020618D825B3008205C8 /* CoreLocation.framework in Frameworks */,
+				DB8B01A818D777C2008205C8 /* MapKit.framework in Frameworks */,
 				DB8B015A18D75DE6008205C8 /* CoreGraphics.framework in Frameworks */,
 				DB8B015C18D75DE6008205C8 /* UIKit.framework in Frameworks */,
 				DB8B015818D75DE6008205C8 /* Foundation.framework in Frameworks */,
@@ -79,6 +135,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB0C27B718DABCD700F3E787 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB0C27D618DAC97C00F3E787 /* MasterViewController.h */,
+				DB0C27D718DAC97C00F3E787 /* MasterViewController.m */,
+				DB0C27BC18DABDCE00F3E787 /* FoundCitiesViewController.h */,
+				DB0C27BD18DABDCE00F3E787 /* FoundCitiesViewController.m */,
+				DB0C27BE18DABDCE00F3E787 /* MapViewController.h */,
+				DB0C27BF18DABDCE00F3E787 /* MapViewController.m */,
+				DB0C27B818DABDCE00F3E787 /* DailyForecastViewController.h */,
+				DB0C27B918DABDCE00F3E787 /* DailyForecastViewController.m */,
+				DB0C27BA18DABDCE00F3E787 /* DetailForecastViewController.h */,
+				DB0C27BB18DABDCE00F3E787 /* DetailForecastViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DB0C27D018DABF3000F3E787 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB0C27D118DABF3900F3E787 /* city_list.txt */,
+				DB0C27D218DABF3900F3E787 /* windDirection.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DB0C27D918DACAF500F3E787 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DB0C27DC18DACB0400F3E787 /* WeatherAPI.h */,
+				DB0C27DD18DACB0400F3E787 /* WeatherAPI.m */,
+				DB0C27DA18DACB0400F3E787 /* PersistencyManager.h */,
+				DB0C27DB18DACB0400F3E787 /* PersistencyManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DB0C27E518DACB8500F3E787 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				DB0C27E618DACB8500F3E787 /* Constants.h */,
+				DB0C27E718DACB8500F3E787 /* UIImage+Rotation.h */,
+				DB0C27E818DACB8500F3E787 /* UIImage+Rotation.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		DB8B014B18D75DE6008205C8 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +204,8 @@
 		DB8B015618D75DE6008205C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB8B020518D825B3008205C8 /* CoreLocation.framework */,
+				DB8B01A718D777C2008205C8 /* MapKit.framework */,
 				DB8B015718D75DE6008205C8 /* Foundation.framework */,
 				DB8B015918D75DE6008205C8 /* CoreGraphics.framework */,
 				DB8B015B18D75DE6008205C8 /* UIKit.framework */,
@@ -116,7 +221,7 @@
 				DB8B016718D75DE6008205C8 /* AppDelegate.m */,
 				DB8B016918D75DE6008205C8 /* Main.storyboard */,
 				DB8B019218D75E83008205C8 /* Classes */,
-				DB8B019918D75F65008205C8 /* API */,
+				DB0C27D018DABF3000F3E787 /* Resources */,
 				DB8B016F18D75DE6008205C8 /* Images.xcassets */,
 				DB8B015E18D75DE6008205C8 /* Supporting Files */,
 			);
@@ -155,9 +260,11 @@
 		DB8B019218D75E83008205C8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DB0C27D918DACAF500F3E787 /* API */,
 				DB8B019318D75E9A008205C8 /* Model */,
 				DB8B019418D75EA5008205C8 /* View */,
-				DB8B019518D75EAF008205C8 /* Controller */,
+				DB0C27B718DABCD700F3E787 /* Controller */,
+				DB0C27E518DACB8500F3E787 /* Other */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -165,6 +272,16 @@
 		DB8B019318D75E9A008205C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DB8B021318D856FA008205C8 /* CityGroup.h */,
+				DB8B021418D856FA008205C8 /* CityGroup.m */,
+				DB8B021618D857D3008205C8 /* CityGroupBuilder.h */,
+				DB8B021718D857D3008205C8 /* CityGroupBuilder.m */,
+				DB1EA1FF18D9946400B661FC /* DailyInfo.h */,
+				DB1EA20018D9946400B661FC /* DailyInfo.m */,
+				DB1EA20218D9955900B661FC /* DailyInfoBuilder.h */,
+				DB1EA20318D9955900B661FC /* DailyInfoBuilder.m */,
+				DB1EA21118DA225C00B661FC /* DetailForecastInfo.h */,
+				DB1EA21218DA225C00B661FC /* DetailForecastInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,24 +289,14 @@
 		DB8B019418D75EA5008205C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DB8B019618D75EC3008205C8 /* ViewController.h */,
-				DB8B019718D75EC3008205C8 /* ViewController.m */,
+				DB0C27C718DABE0D00F3E787 /* CityDetailCell.h */,
+				DB0C27C818DABE0D00F3E787 /* CityDetailCell.m */,
+				DB0C27C918DABE0D00F3E787 /* DailyDetailCell.h */,
+				DB0C27CA18DABE0D00F3E787 /* DailyDetailCell.m */,
+				DB0C27CB18DABE0D00F3E787 /* DetailForecastView.h */,
+				DB0C27CC18DABE0D00F3E787 /* DetailForecastView.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		DB8B019518D75EAF008205C8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		DB8B019918D75F65008205C8 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +377,9 @@
 			files = (
 				DB8B017018D75DE6008205C8 /* Images.xcassets in Resources */,
 				DB8B016218D75DE6008205C8 /* InfoPlist.strings in Resources */,
+				DB0C27D418DABF3900F3E787 /* windDirection.png in Resources */,
 				DB8B016B18D75DE6008205C8 /* Main.storyboard in Resources */,
+				DB0C27D318DABF3900F3E787 /* city_list.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,8 +399,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB8B016818D75DE6008205C8 /* AppDelegate.m in Sources */,
-				DB8B019818D75EC3008205C8 /* ViewController.m in Sources */,
+				DB8B021818D857D3008205C8 /* CityGroupBuilder.m in Sources */,
+				DB1EA20418D9955900B661FC /* DailyInfoBuilder.m in Sources */,
+				DB0C27DF18DACB0400F3E787 /* WeatherAPI.m in Sources */,
+				DB8B021518D856FA008205C8 /* CityGroup.m in Sources */,
+				DB0C27DE18DACB0400F3E787 /* PersistencyManager.m in Sources */,
+				DB0C27C418DABDCE00F3E787 /* FoundCitiesViewController.m in Sources */,
+				DB0C27C218DABDCE00F3E787 /* DailyForecastViewController.m in Sources */,
+				DB0C27CF18DABE0D00F3E787 /* DetailForecastView.m in Sources */,
+				DB0C27CE18DABE0D00F3E787 /* DailyDetailCell.m in Sources */,
 				DB8B016418D75DE6008205C8 /* main.m in Sources */,
+				DB0C27CD18DABE0D00F3E787 /* CityDetailCell.m in Sources */,
+				DB1EA20118D9946400B661FC /* DailyInfo.m in Sources */,
+				DB0C27E918DACB8500F3E787 /* UIImage+Rotation.m in Sources */,
+				DB0C27C318DABDCE00F3E787 /* DetailForecastViewController.m in Sources */,
+				DB1EA21318DA225C00B661FC /* DetailForecastInfo.m in Sources */,
+				DB0C27C518DABDCE00F3E787 /* MapViewController.m in Sources */,
+				DB0C27D818DAC97C00F3E787 /* MasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +622,7 @@
 				DB8B018818D75DE6008205C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB8B018918D75DE6008205C8 /* Build configuration list for PBXNativeTarget "ClearDayTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +631,7 @@
 				DB8B018B18D75DE6008205C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

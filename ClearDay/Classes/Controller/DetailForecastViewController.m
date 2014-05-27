@@ -9,7 +9,7 @@
 #import "DetailForecastViewController.h"
 #import "DetailForecastView.h"
 #import "DetailForecastInfo.h"
-#import "UIImage+Extensions.h"
+#import "UIImage+Rotation.h"
 
 @interface DetailForecastViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *arrowImageView;
